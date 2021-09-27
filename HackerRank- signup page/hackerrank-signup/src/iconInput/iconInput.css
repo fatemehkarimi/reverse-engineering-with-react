@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+:root {
+    --background: #f3f7f7;
+    --text-color: black;
+    --font-size: 1.1vw;
+    --focus-color: #738f93;
+    --icon-size: 1.5vw;
+}
+
+div {
+    background-color: var(--background);
+    overflow: hidden;
+}
+
+span {
+    display: block;
+    overflow: hidden;
+}
+
+input {
+    background-color: var(--background);
+    border: 0;
+    border-radius: 0;
+    color: var(--text-color);
+    font-size: var(--font-size);
+    font-family: "Open Sans", sans-serif;
+    width: 100%;
+    float: left;
+}
+
+input:focus {
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 0.15vw solid var(--focus-color);
+}
+
+img {
+    max-width: var(--icon-size);
+    float: left;
+    padding-right: 0.4vw;
+}
+
+::placeholder {
+    color: var(--focus-color);
+}
