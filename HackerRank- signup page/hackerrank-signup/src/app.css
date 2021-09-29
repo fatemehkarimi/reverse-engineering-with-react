@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
+body {
+    background-color: #f3f7f7;
+}
+
 .auth-container {
 }
 
@@ -12,6 +16,7 @@
 .logo-wraper {
     margin-top: 60px;
     height: 30px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
 }
@@ -32,4 +37,5 @@
 .auth-headline p {
     justify-content: center;
     display: flex;
+    margin-bottom: 40px;
 }
