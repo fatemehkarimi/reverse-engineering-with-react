@@ -8,17 +8,17 @@
     --icon-size: 1.5vw;
 }
 
-div {
+.icon-input {
     background-color: var(--background);
     overflow: hidden;
 }
 
-span {
+.icon-input span {
     display: block;
     overflow: hidden;
 }
 
-input {
+.icon-input input {
     background-color: var(--background);
     border: 0;
     border-radius: 0;
@@ -29,7 +29,7 @@ input {
     float: left;
 }
 
-input:focus {
+.icon-input input:focus {
     outline: none;
     border-top: none;
     border-left: none;
@@ -37,12 +37,12 @@ input:focus {
     border-bottom: 0.15vw solid var(--focus-color);
 }
 
-img {
+.icon-input img {
     max-width: var(--icon-size);
     float: left;
     padding-right: 0.4vw;
 }
 
-::placeholder {
+.icon-input::placeholder {
     color: var(--focus-color);
 }
