@@ -1,5 +1,6 @@
 import React from 'react';
 import IconInput from './iconInput/iconInput';
+import AuthForm from './authForm/authForm';
 import './app.css';
 
 function App() {
@@ -13,11 +14,11 @@ function App() {
           <h2>For Developers</h2>
           <p>Practice coding, prepare for interviews, and get hired.</p>
         </div>
-        <div>
+        <AuthForm>
           <IconInput icon="./user.svg" hint="First & Last name" ></IconInput>
           <IconInput icon="./email.svg" hint="Email" ></IconInput>
           <IconInput icon="./lock.svg" hint="Your password" ></IconInput>
-        </div>
+        </AuthForm>
       </div>
     </div>
   );

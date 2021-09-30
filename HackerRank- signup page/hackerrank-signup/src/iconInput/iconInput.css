@@ -11,6 +11,8 @@
 .icon-input {
     background-color: var(--background);
     overflow: hidden;
+    margin-bottom: 3%;
+    width: 100%;
 }
 
 .icon-input span {
