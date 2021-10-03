@@ -4,6 +4,7 @@
     width: 100%;
     background-color: #ffffff;
     box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+    padding-bottom: 3%;
 }
 
 .tab-header {
@@ -34,7 +35,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 7%;
+    padding-top: 7%;
+    padding-left: 7%;
+    padding-right: 7%;
 }
 
 .auth-btn-container {
@@ -62,4 +65,15 @@
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
     color: #39424e;
+}
+
+.social-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 4%;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-bottom: 0;
 }

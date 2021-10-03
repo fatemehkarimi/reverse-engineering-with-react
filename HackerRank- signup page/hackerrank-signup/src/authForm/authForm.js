@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SocialButton from '../components/button/socialbutton';
 import '../components/button/button.css';
 import './authForm.css';
 
@@ -27,6 +28,16 @@ function AuthForm(props) {
           </div>
           <div className="seperator-line">
             <span className="seperator-label">or connect with</span>
+          </div>
+          <div className="social-container">
+            <SocialButton logo="./facebook.svg" name="facebook" />
+            <SocialButton logo="./google.svg" name="google" />
+            <SocialButton logo="./linkedin.svg" name="linkedin" />
+            <SocialButton logo="./github.svg" name="github" />
+            {/* <img style={ {width: 100, height: 100} } src="./facebook.svg"></img> */}
+            {/* <img style={ {width: 100, height: 100} } src="./google.svg"></img> */}
+            {/* <img style={ {width: 100, height: 100} } src="./linkedin.svg"></img> */}
+            {/* <img style={ {width: 100, height: 100} } src="./github.svg"></img> */}
           </div>
         </div>
       </div>
