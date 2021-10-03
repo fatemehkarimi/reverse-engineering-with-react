@@ -25,6 +25,9 @@ function AuthForm(props) {
           <div className="auth-btn-container">
             <button className="ui-btn ui-btn-large auth-btn">Create An Account</button>
           </div>
+          <div className="seperator-line">
+            <span className="seperator-label">or connect with</span>
+          </div>
         </div>
       </div>
     );

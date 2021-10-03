@@ -42,8 +42,24 @@
     width: 100%;
     justify-content: flex-end;
     padding: 0;
+    margin-bottom: 10%;
 }
 
 .auth-btn {
     float: right;
+}
+
+.seperator-line {
+    border-bottom: 1px solid rgba(0 0 0 / 20%);
+    width: 100%;
+    line-height: 0.1em;
+    text-align: center;
+}
+
+.seperator-label {
+    background-color: #ffffff;
+    padding: 0 8%;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    color: #39424e;
 }
