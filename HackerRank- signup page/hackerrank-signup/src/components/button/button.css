@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+:root {
+    --button-color: #3ea94d;
+    --button-text-color: #ffffff;
+}
+
+.ui-btn {
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    font-family: "Open Sans", sans-serif;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 4px 12px 0 rgba(0 0 0 / 20%);
+}
+
+.ui-btn-large {
+    font-size: 2vh;
+    font-weight: 700;
+    padding: 15px 20px 15px 20px;
+}

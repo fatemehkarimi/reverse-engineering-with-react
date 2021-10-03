@@ -6,7 +6,7 @@ function IconInput(props) {
     return (
         <div className="icon-input">
             <img src={ props.icon } alt="icon" />
-            <span><input placeholder={ props.hint }></input></span>
+            <input placeholder={ props.hint }></input>
         </div>
     );
 }

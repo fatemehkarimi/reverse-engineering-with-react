@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import "./authForm.css"
+import '../components/button/button.css';
+import './authForm.css';
 
 function AuthForm(props) {
   const [isSignupActiveTab, setSignupActiveTab] = useState(true);
@@ -21,6 +22,9 @@ function AuthForm(props) {
         </div>
         <div className="tab-list-content">
           { props.children }
+          <div className="auth-btn-container">
+            <button className="ui-btn ui-btn-large auth-btn">Create An Account</button>
+          </div>
         </div>
       </div>
     );
