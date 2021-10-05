@@ -1,6 +1,12 @@
 import React from 'react';
 import IconInput from './iconInput/iconInput';
 import AuthForm from './authForm/authForm';
+import {
+  VALIDATOR_REQUIRE,
+  VALIDATOR_MIN,
+  VALIDATOR_MAX,
+  VALIDATOR_EMAIL
+} from './validators';
 import './app.css';
 
 function App() {
@@ -15,9 +21,12 @@ function App() {
           <p>Practice coding, prepare for interviews, and get hired.</p>
         </div>
         <AuthForm>
-          <IconInput icon="./user.svg" hint="First & Last name" ></IconInput>
-          <IconInput icon="./email.svg" hint="Email" ></IconInput>
-          <IconInput icon="./lock.svg" hint="Your password" ></IconInput>
+          <IconInput icon="./user.svg" hint="First & Last name"
+            validators={ [VALIDATOR_REQUIRE(), VALIDATOR_MIN(5), VALIDATOR_MAX(40) ] } ></IconInput>
+          <IconInput icon="./email.svg" hint="Email"
+            validators={ [VALIDATOR_EMAIL()] } ></IconInput>
+          <IconInput icon="./lock.svg" type="password" hint="Your password"
+            validators={ [VALIDATOR_MIN(6), VALIDATOR_MAX(20)] } ></IconInput>
         </AuthForm>
       </div>
     </div>

@@ -34,10 +34,6 @@ function AuthForm(props) {
             <SocialButton logo="./google.svg" name="google" />
             <SocialButton logo="./linkedin.svg" name="linkedin" />
             <SocialButton logo="./github.svg" name="github" />
-            {/* <img style={ {width: 100, height: 100} } src="./facebook.svg"></img> */}
-            {/* <img style={ {width: 100, height: 100} } src="./google.svg"></img> */}
-            {/* <img style={ {width: 100, height: 100} } src="./linkedin.svg"></img> */}
-            {/* <img style={ {width: 100, height: 100} } src="./github.svg"></img> */}
           </div>
         </div>
       </div>

@@ -5,6 +5,7 @@
     --text-color: black;
     --font-size: 1vw;
     --focus-color: #738f93;
+    --error-color: #cd3635;
     --icon-size: 1.5vw;
 }
 
@@ -22,6 +23,10 @@
 
 .icon-input-clicked {
     border-bottom: 0.15vw solid var(--focus-color);
+}
+
+.icon-input-errored {
+    border-bottom: 0.15vw solid var(--error-color);
 }
 
 .icon-input input {
