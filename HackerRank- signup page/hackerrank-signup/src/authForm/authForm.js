@@ -11,6 +11,10 @@ function AuthForm(props) {
     setSignupActiveTab(isActive);
   }
 
+  function handleFormSubmit(e) {
+    e.preventDefault();
+  }
+
     return (
       <div className="auth-form">
         <div className="tab-header">
@@ -22,10 +26,12 @@ function AuthForm(props) {
              style={ !isSignupActiveTab ? { boxShadow: "-5px 0px 5px -5px rgb(0 0 0 / 20%)", zIndex: 1 } : {} } >Log in</a>
         </div>
         <div className="tab-list-content">
-          { props.children }
-          <div className="auth-btn-container">
-            <button className="ui-btn ui-btn-large auth-btn">Create An Account</button>
-          </div>
+          <form onSubmit={ handleFormSubmit } >
+            { props.children }
+            <div className="auth-btn-container">
+              <button className="ui-btn ui-btn-large auth-btn">Create An Account</button>
+            </div>
+          </form>
           <div className="seperator-line">
             <span className="seperator-label">or connect with</span>
           </div>

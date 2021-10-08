@@ -40,6 +40,10 @@
     padding-right: 7%;
 }
 
+.tab-list-content form {
+    width: 100%;
+}
+
 .auth-btn-container {
     display: flex;
     width: 100%;
@@ -63,8 +67,8 @@
     background-color: #ffffff;
     padding: 0 8%;
     font-family: "Open Sans", sans-serif;
-    font-size: 14px;
-    color: #39424e;
+    font-size: 0.9vw;
+    color: #b7c9cc;
 }
 
 .social-container {

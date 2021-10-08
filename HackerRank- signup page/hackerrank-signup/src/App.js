@@ -21,11 +21,18 @@ function App() {
           <p>Practice coding, prepare for interviews, and get hired.</p>
         </div>
         <AuthForm>
-          <IconInput icon="./user.svg" hint="First & Last name"
+          <IconInput icon="./user.svg"
+            name="name"
+            hint="First & Last name"
             validators={ [VALIDATOR_REQUIRE(), VALIDATOR_MIN(5), VALIDATOR_MAX(40) ] } ></IconInput>
-          <IconInput icon="./email.svg" hint="Email"
+          <IconInput icon="./email.svg"
+            name="email"
+            hint="Email"
             validators={ [VALIDATOR_EMAIL()] } ></IconInput>
-          <IconInput icon="./lock.svg" type="password" hint="Your password"
+          <IconInput icon="./lock.svg"
+            name="icon"
+            type="password"
+            hint="Your password"
             validators={ [VALIDATOR_MIN(6), VALIDATOR_MAX(20)] } ></IconInput>
         </AuthForm>
       </div>
