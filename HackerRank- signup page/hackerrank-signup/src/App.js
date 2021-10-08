@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import IconInput from './iconInput/iconInput';
-import AuthForm from './authForm/authForm';
+import AuthForm, { AUTHFORM_MODE } from './authForm/authForm';
 import {
   VALIDATOR_REQUIRE,
   VALIDATOR_MIN,
@@ -10,6 +10,12 @@ import {
 import './app.css';
 
 function App() {
+  const [formMode, setFormMode] = useState(AUTHFORM_MODE.SIGNUP);
+  
+  function authFormTabChanged(mode) {
+    setFormMode(mode);
+  }
+
   return (
     <div className="auth-container">
       <div className="auth-content-wrap">
@@ -20,20 +26,39 @@ function App() {
           <h2>For Developers</h2>
           <p>Practice coding, prepare for interviews, and get hired.</p>
         </div>
-        <AuthForm>
-          <IconInput icon="./user.svg"
-            name="name"
-            hint="First & Last name"
-            validators={ [VALIDATOR_REQUIRE(), VALIDATOR_MIN(5), VALIDATOR_MAX(40) ] } ></IconInput>
-          <IconInput icon="./email.svg"
-            name="email"
-            hint="Email"
-            validators={ [VALIDATOR_EMAIL()] } ></IconInput>
-          <IconInput icon="./lock.svg"
-            name="icon"
-            type="password"
-            hint="Your password"
-            validators={ [VALIDATOR_MIN(6), VALIDATOR_MAX(20)] } ></IconInput>
+        <AuthForm handleTabChanged={ authFormTabChanged } >
+          { formMode == AUTHFORM_MODE.SIGNUP &&
+            <IconInput icon="./user.svg"
+              name="name"
+              hint="First & Last name"
+              validators={ [VALIDATOR_REQUIRE(), VALIDATOR_MIN(5), VALIDATOR_MAX(40) ] } />
+          }
+          { formMode == AUTHFORM_MODE.SIGNUP &&
+            <IconInput icon="./email.svg"
+              name="email"
+              hint="Email"
+              validators={ [VALIDATOR_EMAIL()] } />
+          }
+          { formMode == AUTHFORM_MODE.SIGNUP &&
+            <IconInput icon="./lock.svg"
+              name="icon"
+              type="password"
+              hint="Your password"
+              validators={ [VALIDATOR_MIN(6), VALIDATOR_MAX(20)] } />
+          }
+          { formMode == AUTHFORM_MODE.LOGIN &&
+            <IconInput icon="./email.svg"
+              name="email"
+              hint="Email"
+              validators={ [VALIDATOR_EMAIL()] } />
+          }
+          { formMode == AUTHFORM_MODE.LOGIN &&
+            <IconInput icon="./lock.svg"
+              name="icon"
+              type="password"
+              hint="Your password"
+              validators={ [VALIDATOR_MIN(6), VALIDATOR_MAX(20)] } />
+          }
         </AuthForm>
       </div>
     </div>

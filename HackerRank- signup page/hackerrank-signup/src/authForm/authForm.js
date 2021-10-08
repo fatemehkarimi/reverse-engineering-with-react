@@ -3,12 +3,22 @@ import SocialButton from '../components/button/socialbutton';
 import '../components/button/button.css';
 import './authForm.css';
 
+export const AUTHFORM_MODE = {
+  LOGIN: 'login',
+  SIGNUP: 'signup'
+};
+
 function AuthForm(props) {
   const [isSignupActiveTab, setSignupActiveTab] = useState(true);
+  const notifyTabChanged = props.handleTabChanged;
 
   function changeTab(e, isActive) {
     e.preventDefault();
     setSignupActiveTab(isActive);
+    if(isActive)
+      notifyTabChanged(AUTHFORM_MODE.SIGNUP);
+    else
+      notifyTabChanged(AUTHFORM_MODE.LOGIN);
   }
 
   function handleFormSubmit(e) {
