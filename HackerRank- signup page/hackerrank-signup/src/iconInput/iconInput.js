@@ -17,8 +17,10 @@ function IconInput(props) {
     const checkInputIsValid = (e) => {
       setError("");
       var valid = validate(e.target.value, props.validators);
-      if(valid)
+      if(valid){
+        setActivated(false);
         setInputState(INPUT_STATUS.VALID);
+      }
       else
         setInputState(INPUT_STATUS.INVALID);
     }
