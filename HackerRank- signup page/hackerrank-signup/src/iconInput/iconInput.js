@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { validate, validte } from '../validators';
 import './iconInput.css';
 
-const INPUT_STATUS = {
+export const INPUT_STATUS = {
   UNTOUCHED: 'UNTOUCHED',
   VALID: 'VALID',
   INVALID: 'INVALID'
@@ -12,25 +12,24 @@ function IconInput(props) {
     const divElem = useRef();
     const [activated, setActivated] = useState(false);
     const [inputState, setInputState] = useState(INPUT_STATUS.UNTOUCHED);
+    const notifyStateChanged = props.notifyStateChanged;
 
     const validateInput = (e) => {
       var valid = validate(e.target.value, props.validators);
-      if(valid) 
-        setInputState(INPUT_STATUS.VALID);
-      else
-        setInputState(INPUT_STATUS.INVALID);
       return valid;
     }
 
-    const handleChangeEvent = (e) => {
-      if(inputState == INPUT_STATUS.UNTOUCHED)
-        return;
-      validateInput(e);
-    }
-
     const handleBlurEvent = (e) => {
-      if(validateInput(e))
+      var valid = validateInput(e);
+      if(valid) {
+        setInputState(INPUT_STATUS.VALID);
+        notifyStateChanged(props.name, INPUT_STATUS.VALID);
         setActivated(false);
+      }
+      else {
+        setInputState(INPUT_STATUS.INVALID);
+        notifyStateChanged(props.name, INPUT_STATUS.INVALID);
+      }
     }
 
     return (
@@ -39,8 +38,10 @@ function IconInput(props) {
         <img src={ props.icon } alt="icon" />
         <input type={ props.type }
           name={ props.name }
-          onFocus={ () => setActivated(true) }
-          onChange={ handleChangeEvent }
+          onFocus={ () => {
+            setActivated(true);
+            setInputState(INPUT_STATUS.VALID);
+          } }
           onBlur={ handleBlurEvent }
           placeholder={ props.hint }></input>
       </div>

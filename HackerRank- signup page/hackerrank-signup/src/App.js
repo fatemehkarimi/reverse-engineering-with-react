@@ -19,6 +19,11 @@ function App() {
   function handleFormSubmit(e) {
     e.preventDefault();
     var data = new FormData(e.target);
+    var valid = true;
+    data.forEach((field) => {
+      if(!field || field.length == 0)
+        valid = false;
+    });
   }
 
   return (
