@@ -12,24 +12,25 @@ function IconInput(props) {
     const divElem = useRef();
     const [activated, setActivated] = useState(false);
     const [inputState, setInputState] = useState(INPUT_STATUS.UNTOUCHED);
-    const [error, setError] = useState("");
 
-    const checkInputIsValid = (e) => {
-      setError("");
+    const validateInput = (e) => {
       var valid = validate(e.target.value, props.validators);
-      if(valid){
-        setActivated(false);
+      if(valid) 
         setInputState(INPUT_STATUS.VALID);
-      }
       else
         setInputState(INPUT_STATUS.INVALID);
+      return valid;
     }
 
-    const checkInputChange = (e) => {
+    const handleChangeEvent = (e) => {
       if(inputState == INPUT_STATUS.UNTOUCHED)
         return;
+      validateInput(e);
+    }
 
-      checkInputIsValid(e);
+    const handleBlurEvent = (e) => {
+      if(validateInput(e))
+        setActivated(false);
     }
 
     return (
@@ -37,9 +38,10 @@ function IconInput(props) {
         (inputState == INPUT_STATUS.INVALID ? "icon-input-errored" : "icon-input-clicked") : "" }` }>
         <img src={ props.icon } alt="icon" />
         <input type={ props.type }
+          name={ props.name }
           onFocus={ () => setActivated(true) }
-          onChange={ checkInputChange }
-          onBlur={ checkInputIsValid }
+          onChange={ handleChangeEvent }
+          onBlur={ handleBlurEvent }
           placeholder={ props.hint }></input>
       </div>
     );

@@ -16,6 +16,11 @@ function App() {
     setFormMode(mode);
   }
 
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    var data = new FormData(e.target);
+  }
+
   return (
     <div className="auth-container">
       <div className="auth-content-wrap">
@@ -26,7 +31,7 @@ function App() {
           <h2>For Developers</h2>
           <p>Practice coding, prepare for interviews, and get hired.</p>
         </div>
-        <AuthForm handleTabChanged={ authFormTabChanged } >
+        <AuthForm onFormSubmit={ handleFormSubmit } handleTabChanged={ authFormTabChanged } >
           { formMode == AUTHFORM_MODE.SIGNUP &&
             <IconInput icon="./user.svg"
               name="name"
@@ -41,7 +46,7 @@ function App() {
           }
           { formMode == AUTHFORM_MODE.SIGNUP &&
             <IconInput icon="./lock.svg"
-              name="icon"
+              name="password"
               type="password"
               hint="Your password"
               validators={ [VALIDATOR_MIN(6), VALIDATOR_MAX(20)] } />
@@ -49,15 +54,15 @@ function App() {
           { formMode == AUTHFORM_MODE.LOGIN &&
             <IconInput icon="./email.svg"
               name="email"
-              hint="Email"
-              validators={ [VALIDATOR_EMAIL()] } />
+              hint="Your username or email"
+              validators={ [] } />
           }
           { formMode == AUTHFORM_MODE.LOGIN &&
             <IconInput icon="./lock.svg"
-              name="icon"
+              name="password"
               type="password"
               hint="Your password"
-              validators={ [VALIDATOR_MIN(6), VALIDATOR_MAX(20)] } />
+              validators={ [] } />
           }
         </AuthForm>
       </div>
