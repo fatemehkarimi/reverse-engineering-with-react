@@ -40,6 +40,7 @@ function IconInput(props) {
           name={ props.name }
           onFocus={ () => {
             setActivated(true);
+            notifyStateChanged(props.name, INPUT_STATUS.VALID);
             setInputState(INPUT_STATUS.VALID);
           } }
           onBlur={ handleBlurEvent }
