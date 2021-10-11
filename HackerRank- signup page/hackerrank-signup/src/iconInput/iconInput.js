@@ -19,6 +19,14 @@ function IconInput(props) {
       return valid;
     }
 
+    const handleFocusEvent = (e) => {
+      setActivated(true);
+      if(inputState != INPUT_STATUS.UNTOUCHED) {
+        notifyStateChanged(props.name, INPUT_STATUS.VALID);
+        setInputState(INPUT_STATUS.VALID);
+      }
+    }
+
     const handleBlurEvent = (e) => {
       var valid = validateInput(e);
       if(valid) {
@@ -38,11 +46,7 @@ function IconInput(props) {
         <img src={ props.icon } alt="icon" />
         <input type={ props.type }
           name={ props.name }
-          onFocus={ () => {
-            setActivated(true);
-            notifyStateChanged(props.name, INPUT_STATUS.VALID);
-            setInputState(INPUT_STATUS.VALID);
-          } }
+          onFocus={ handleFocusEvent }
           onBlur={ handleBlurEvent }
           placeholder={ props.hint }></input>
       </div>

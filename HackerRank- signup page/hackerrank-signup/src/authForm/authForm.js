@@ -15,6 +15,7 @@ function AuthForm(props) {
   const [disableSubmitButton, setDisableSubmitButton] = useState(false);
   const notifyTabChanged = props.handleTabChanged;
 
+
   function resetFormValidty() {
     setFormStatus({});
     setDisableSubmitButton(false);
@@ -32,7 +33,7 @@ function AuthForm(props) {
   }
 
   function handleInputState(inputName, state) {
-    var newFormState = {...setFormStatus};
+    var newFormState = {...formStatus};
     newFormState[inputName] = state;
     setFormStatus(newFormState);
 
@@ -40,9 +41,9 @@ function AuthForm(props) {
       setDisableSubmitButton(true);
     else{
       var valid = true;
-      for(const stateInput in formStatus)
-        valid = valid && formStatus[stateInput];
-
+      for(const stateInput in newFormState)
+        valid = valid && (newFormState[stateInput] == INPUT_STATUS.VALID ? true : false);
+      
       if(!valid)
         setDisableSubmitButton(true);
       else
