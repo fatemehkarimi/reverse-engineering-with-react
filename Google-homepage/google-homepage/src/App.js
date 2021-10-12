@@ -4,7 +4,7 @@ import "./App.css"
 function App() {
   return (
     <div className="flex-horizontal">
-      <div className="flex-row top-menu">
+      <div className="top-menu">
         <a className="link-primary" href="#">Gmail</a>
         <a className="link-primary" href="#">Images</a>
         <svg focusable="false" viewBox="0 0 24 24">
@@ -13,7 +13,11 @@ function App() {
         </svg>
         <button className="btn btn-primary">Sign in</button>
       </div>
-      <div>Image</div>
+      <div className="flex-row img-container">
+        <div className="image-wrapper">
+          <img src="./google-big.png" className="image-container" alt="google logo"></img>
+        </div>
+      </div>
       <div>SearchBox</div>
       <div>About</div>
     </div>
