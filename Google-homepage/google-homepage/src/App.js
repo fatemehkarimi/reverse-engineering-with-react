@@ -26,9 +26,9 @@ function App() {
               <button className="btn btn-small btn-secondary">Google Search</button>
               <button className="btn btn-small btn-secondary">I'm feeling lucky</button>
             </div>
+            <div className="language-div">Google offered in: <a href="#">فارسی</a></div>
         </div>
       </form>
-      <div>About</div>
     </div>
   );
 }
