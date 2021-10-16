@@ -2,7 +2,7 @@
 
 body {
     background: #FFFFFF;
-    font-family: 'Cantarell', sans-serif;
+    font-family: arial, sans-serif;
 }
 
 .flex-horizontal {
@@ -31,12 +31,24 @@ body {
     color: #FFFFFF;
 }
 
+.btn-secondary {
+  background: #f8f9fa;
+}
+
+.btn-secondary:hover {
+  box-shadow: 0px 0px 3px #858585;
+}
+
+.btn-small {
+  font-size: 92%;
+  padding: 2% 3%;
+  margin: 1%;
+}
+
 svg {
-    /* width: 20px; */
     width: 100%;
     color: #5f6368;
     opacity: 1;
-    /* margin: 0.5%; */
 }
 
 .link-primary {
@@ -82,5 +94,19 @@ svg {
   display: flex;
   justify-content: center;
   justify-items: center;
+  flex-direction: column;
   margin: 0% 34%;
+}
+
+.search-form {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.submit-button-form {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  margin-top: 5%;
 }

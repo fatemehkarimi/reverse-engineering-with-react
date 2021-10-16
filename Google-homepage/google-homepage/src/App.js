@@ -16,10 +16,18 @@ function App() {
       </div>
       <div className="flex-row img-container">
         <div className="image-wrapper">
-          <img src="./google-big.png" className="image-container" alt="google logo"></img>
+          <img src="./google-big.png" className="image-container" alt="google logo"/>
         </div>
       </div>
-      <div className="search-box-wrapper"><SearchBox /></div>
+      <form class="search-form">
+        <div className="search-box-wrapper">
+            <SearchBox />
+            <div className="submit-button-form">
+              <button className="btn btn-small btn-secondary">Google Search</button>
+              <button className="btn btn-small btn-secondary">I'm feeling lucky</button>
+            </div>
+        </div>
+      </form>
       <div>About</div>
     </div>
   );

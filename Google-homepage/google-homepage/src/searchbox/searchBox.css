@@ -8,6 +8,10 @@
     border-radius: 200px;
 }
 
+.search-box:hover {
+    box-shadow: 1px 1px 10px #e4e4e4;
+}
+
 .search-box input {
     width: 100%;
     margin-top: 1%;
