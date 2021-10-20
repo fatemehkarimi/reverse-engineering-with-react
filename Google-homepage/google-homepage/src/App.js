@@ -2,6 +2,7 @@ import React from 'react';
 import "./App.css";
 import { ReactComponent as MenuIcon } from "./icons/menu.svg";
 import SearchBox from './searchbox/searchBox';
+import GridMenu from './gridMenu/gridMenu';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
         <a className="link-primary" href="#">Gmail</a>
         <a className="link-primary" href="#">Images</a>
         <div className="svg-icon-wrapper">
-          <MenuIcon/>
+          <GridMenu />
         </div>
         <button className="btn btn-primary">Sign in</button>
       </div>
