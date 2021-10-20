@@ -29,6 +29,19 @@ function App() {
             <div className="language-div">Google offered in: <a href="#">فارسی</a></div>
         </div>
       </form>
+      <div className="about-menu">
+        <div className="sub-menu">
+          <a className="link-secondary menu-item">About</a>
+          <a className="link-secondary menu-item">Advertising</a>
+          <a className="link-secondary menu-item">Business</a>
+          <a className="link-secondary menu-item">How Search works</a>
+        </div>
+        <div className="sub-menu">
+          <a className="link-secondary menu-item">Privacy</a>
+          <a className="link-secondary menu-item">Terms</a>
+          <a className="link-secondary menu-item">Settings</a>
+        </div>
+      </div>
     </div>
   );
 }
