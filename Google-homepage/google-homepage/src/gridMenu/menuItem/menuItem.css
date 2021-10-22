@@ -1,3 +1,8 @@
 .grid-menu-item {
     border: 1px solid red;
 }
+
+.grid-menu-item img {
+    display: inline-block;
+    width: 48px;
+}
