@@ -13,6 +13,18 @@ import ContactsLogo from '../icons/contacts.png';
 import DriveLogo from '../icons/drive.png';
 import CalendarLogo from '../icons/calendar.png';
 import TranslateLogo from '../icons/translate.png';
+import PhotoLogo from '../icons/photo.png';
+import DuoLogo from '../icons/duo.png';
+import ShoppingLogo from '../icons/shopping.png';
+import DocsLogo from '../icons/docs.png';
+import SheetsLogo from '../icons/sheets.png';
+import SlidesLogo from '../icons/slides.png';
+import BooksLogo from '../icons/books.png';
+import BloggerLogo from '../icons/blogger.png';
+import HangoutsLogo from '../icons/hangouts.png';
+import KeepLogo from '../icons/keep.png';
+import JamboardLogo from '../icons/jamboard.png';
+import ClassroomLogo from '../icons/classroom.png';
 import './gridMenu.css';
 
 
@@ -30,6 +42,19 @@ function Menu() {
         <MenuItem src={ DriveLogo } name="Drive" />
         <MenuItem src={ CalendarLogo } name="Calendar" />
         <MenuItem src={ TranslateLogo } name="Translate" />
+        <MenuItem src={ PhotoLogo } name="Photo" />
+        <MenuItem src={ DuoLogo } name="Duo" />
+        <MenuItem src={ ShoppingLogo } name="Shopping" />
+        <div className="horizontal-line"></div>
+        <MenuItem src={ DocsLogo } name="Docs" />
+        <MenuItem src={ SheetsLogo } name="Sheets" />
+        <MenuItem src={ SlidesLogo } name="Slides" />
+        <MenuItem src={ BooksLogo } name="Books" />
+        <MenuItem src={ BloggerLogo } name="Blogger" />
+        <MenuItem src={ HangoutsLogo } name="Hangouts" />
+        <MenuItem src={ KeepLogo } name="Keep" />
+        <MenuItem src={ JamboardLogo } name="Jamboard" />
+        <MenuItem src={ ClassroomLogo } name="Classroom" />
     </div>);
 }
 
