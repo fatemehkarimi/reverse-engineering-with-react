@@ -25,6 +25,15 @@ import HangoutsLogo from '../icons/hangouts.png';
 import KeepLogo from '../icons/keep.png';
 import JamboardLogo from '../icons/jamboard.png';
 import ClassroomLogo from '../icons/classroom.png';
+import EarthLogo from '../icons/earth.png';
+import CollectionsLogo from '../icons/collections.png';
+import ArtsLogo from '../icons/arts.png';
+import AdsLogo from '../icons/ads.png';
+import PodcastsLogo from '../icons/podcasts.png';
+import StadiaLogo from '../icons/stadia.png';
+import OneLogo from '../icons/one.png';
+import TravelLogo from '../icons/travel.png';
+import FormsLogo from '../icons/forms.png';
 import './gridMenu.css';
 
 
@@ -55,6 +64,18 @@ function Menu() {
         <MenuItem src={ KeepLogo } name="Keep" />
         <MenuItem src={ JamboardLogo } name="Jamboard" />
         <MenuItem src={ ClassroomLogo } name="Classroom" />
+        <MenuItem src={ EarthLogo } name="Earth" />
+        <MenuItem src={ CollectionsLogo } name="Collections" />
+        <MenuItem src={ ArtsLogo } name="Arts And Culture" />
+        <MenuItem src={ AdsLogo } name="Google Ads" />
+        <MenuItem src={ PodcastsLogo } name="Podcasts" />
+        <MenuItem src={ StadiaLogo } name="Stadia" />
+        <MenuItem src={ OneLogo } name="Google One" />
+        <MenuItem src={ TravelLogo } name="Travel" />
+        <MenuItem src={ FormsLogo } name="Forms" />
+        <div className="more-tools">
+            <a>More from Google</a>
+        </div>
     </div>);
 }
 

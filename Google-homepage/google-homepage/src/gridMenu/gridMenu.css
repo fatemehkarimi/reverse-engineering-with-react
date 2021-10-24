@@ -30,3 +30,26 @@
     grid-column-end: 4;
     margin: 10px 3px;
 }
+
+.more-tools {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.more-tools a {
+    padding: 10px 24px;
+    text-decoration: none;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    color: #1a73e8;
+    margin: 10px 0;
+    font-family: 'Google Sans', Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+}
+
+.more-tools a:hover {
+    cursor: pointer;
+    background: #f8faff;
+}
