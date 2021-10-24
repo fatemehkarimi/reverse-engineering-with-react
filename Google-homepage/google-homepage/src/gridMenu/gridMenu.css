@@ -12,7 +12,7 @@
     border: 1px solid rgba(0,0,0,0.2);
     border-radius: 8px;
     width: 17vw;
-    height: 30vh;
+    height: 40vh;
     overflow-y: scroll;
     box-shadow: 0px 1px 2px 0px rgb(60 64 67 / 30%),
                 0px 2px 6px 2px rgb(60 64 67 / 15%);
@@ -52,4 +52,17 @@
 .more-tools a:hover {
     cursor: pointer;
     background: #f8faff;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    height: 200px;
+    border-radius: 100px;
+    background: rgba(0,0,0,0.2);
+    border-right: 5px solid white;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
 }
