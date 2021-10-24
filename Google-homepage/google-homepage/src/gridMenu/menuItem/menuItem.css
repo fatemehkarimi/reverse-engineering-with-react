@@ -1,9 +1,24 @@
 .grid-menu-item {
-    /* border: 1px solid red; */
-    width: 48px;
+    box-sizing: content-box;
+    padding: 15px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-menu-item:hover {
+    background: #e9ecff;
 }
 
 .grid-menu-item img {
-    display: inline-block;
     width: 48px;
+    height: 48px;
+}
+
+.grid-menu-item span {
+    margin-top: 5px;
+    font-size: 14px;
+    text-align: center;
 }
