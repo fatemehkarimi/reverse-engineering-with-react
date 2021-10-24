@@ -66,7 +66,7 @@ function Menu() {
         <MenuItem src={ ClassroomLogo } name="Classroom" />
         <MenuItem src={ EarthLogo } name="Earth" />
         <MenuItem src={ CollectionsLogo } name="Collections" />
-        <MenuItem src={ ArtsLogo } name="Arts And Culture" />
+        <MenuItem src={ ArtsLogo } name="Arts" />
         <MenuItem src={ AdsLogo } name="Google Ads" />
         <MenuItem src={ PodcastsLogo } name="Podcasts" />
         <MenuItem src={ StadiaLogo } name="Stadia" />

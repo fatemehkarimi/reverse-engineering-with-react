@@ -8,6 +8,14 @@
     align-items: center;
 }
 
+.grid-menu-item a {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    text-decoration: none;
+    color: black;
+}
+
 .grid-menu-item:hover {
     background: #e9ecff;
 }
@@ -19,6 +27,6 @@
 
 .grid-menu-item span {
     margin-top: 5px;
-    font-size: 14px;
+    font-size: 12px;
     text-align: center;
 }
