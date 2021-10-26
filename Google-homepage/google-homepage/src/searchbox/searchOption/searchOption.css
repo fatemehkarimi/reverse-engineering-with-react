@@ -1,0 +1,25 @@
+.search-option {
+    list-style-type: none;
+    padding-bottom: 3%;
+}
+
+.search-option img {
+    width: 20px;
+    margin: 3px 10px;
+}
+
+.search-option-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 20px;
+}
+
+.search-option-container:hover {
+    background: #eeeeee;
+}
+
+.search-option a {
+    text-decoration: none;
+}

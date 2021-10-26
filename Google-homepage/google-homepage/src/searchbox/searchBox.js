@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
+import SearchOption from './searchOption/searchOption.js';
 import { ReactComponent as SearchIcon } from '../icons/search.svg';
 import { ReactComponent as MicrophoneIcon } from '../icons/microphone.svg';
 import "./searchBox.css";
 
 function SearchHistory() {
-    return (<div className="search-history">
-        <ul>
-            <li>salam</li>
-            <li>Iran university of science and technology</li>
-            <li>Isfahan university of technology</li>
-            <li>golestan</li>
+    return (<div>
+        <ul className="search-history-container">
+            <SearchOption title="salam" />
+            <SearchOption title="Iran university of science and technology" />
+            <SearchOption title="Isfahan university of technology" />
+            <SearchOption title="golestan" />
         </ul>
     </div>);   
 }
@@ -22,10 +23,10 @@ function SearchBox(props) {
     }
 
     return(
-    <div className={ `${displaySearchHistory ? "search-box-expanded" : "search-box"}` }>
+    <div className={ `search-box ${displaySearchHistory ? "search-box-expanded" : ""}` }>
       <div className="search-input-container">
         <SearchIcon className="search-box-icon" />
-        <input name="q" className="search-box-input" onClick={ handleInputClick }
+        <input name="q" onClick={ handleInputClick }
             onBlur={ () => setDisplaySearchHistory(false) } />
         <MicrophoneIcon className="search-box-icon" />
       </div>
