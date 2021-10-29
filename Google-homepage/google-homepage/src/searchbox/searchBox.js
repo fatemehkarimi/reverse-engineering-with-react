@@ -20,14 +20,16 @@ function SearchBox(props) {
     }
 
     return(
-    <div className={ `search-box ${displaySearchHistory ? "search-box-expanded" : ""}` }>
+    <div className={ `search-box ${displaySearchHistory && props.searchHistory.length > 0 ? "search-box-expanded" : ""}` }>
       <div className="search-input-container">
         <SearchIcon className="search-box-icon" />
         <input name="q" autoComplete="off" onClick={ handleInputClick }
             onBlur={ () => setDisplaySearchHistory(false) } />
         <MicrophoneIcon className="search-box-icon" />
       </div>
-        { displaySearchHistory && <SearchHistory items={ props.searchHistory } /> }
+        { displaySearchHistory
+        && props.searchHistory.length > 0
+        && <SearchHistory items={ props.searchHistory } /> }
     </div>);
 }
 

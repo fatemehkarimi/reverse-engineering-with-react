@@ -10,9 +10,14 @@ function App() {
   function handleSubmit(e) {
     e.preventDefault();
     var query = e.target.q.value;
-    if(!query || query.length)
-    setSearchHistoryItems([...searchHistoryItems, query]);
+    if(!query || query.trim().length == 0)
+      return;
+    
+    var newSearchHistoryItems = [query, ...searchHistoryItems];
+    if(newSearchHistoryItems.length > 8)
+      newSearchHistoryItems.pop();
 
+    setSearchHistoryItems(newSearchHistoryItems);
     e.target.reset();
   }
 

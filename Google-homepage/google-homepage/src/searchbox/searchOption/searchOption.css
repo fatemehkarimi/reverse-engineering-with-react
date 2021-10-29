@@ -12,8 +12,8 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    font-size: 20px;
-    padding: 1% 0;
+    font-size: 17px;
+    padding: 0.5% 0;
 }
 
 .search-option-container:hover {
