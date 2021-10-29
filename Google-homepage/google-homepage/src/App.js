@@ -1,10 +1,21 @@
-import React from 'react';
-import "./App.css";
+import React, { useState } from 'react';
 import { ReactComponent as MenuIcon } from "./icons/menu.svg";
 import SearchBox from './searchbox/searchBox';
 import GridMenu from './gridMenu/gridMenu';
+import "./App.css";
 
 function App() {
+  const[searchHistoryItems, setSearchHistoryItems] = useState([]);
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    var query = e.target.q.value;
+    if(!query || query.length)
+    setSearchHistoryItems([...searchHistoryItems, query]);
+
+    e.target.reset();
+  }
+
   return (
     <div className="flex-horizontal">
       <div className="top-menu">
@@ -20,11 +31,11 @@ function App() {
           <img src="./google-big.png" className="image-container" alt="google logo"/>
         </div>
       </div>
-      <form class="search-form">
+      <form class="search-form" onSubmit={ handleSubmit } >
         <div className="search-box-wrapper">
-            <SearchBox />
+            <SearchBox searchHistory={ searchHistoryItems } />
             <div className="submit-button-form">
-              <button className="btn btn-small btn-secondary">Google Search</button>
+              <button type="submit" className="btn btn-small btn-secondary">Google Search</button>
               <button className="btn btn-small btn-secondary">I'm feeling lucky</button>
             </div>
             <div className="language-div">Google offered in: <a href="#">فارسی</a></div>

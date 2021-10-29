@@ -87,7 +87,7 @@ function GridMenu(props) {
     }
 
     return (<div className="menu-icon-wrapper">
-        <a role="button" href="#">
+        <a role="button" href="#" onBlur={ () => setMenuOpen(false) } >
             <MenuIcon onClick={ handleMenuClick } />
         </a>
         { menuOpen ? <Menu /> : null }
